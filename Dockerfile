@@ -2,7 +2,7 @@ FROM tensorflow/tensorflow:latest-gpu
 
 RUN apt-add-repository ppa:fish-shell/release-2
 RUN  apt-get update \
-  && apt-get install -y wget fish\
+  && apt-get install -y wget fish git curl\
   && rm -rf /var/lib/apt/lists/*
 RUN pip install pudb
 RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
